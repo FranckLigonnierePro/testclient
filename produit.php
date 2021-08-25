@@ -4,7 +4,7 @@ include("connection.php");
 include("function.php");
 $id = $_POST['articleId'];
 getArticleFromId($id);
-
+$title = "Produit | GAMERCASH";
 $user_data = check_login($con);
 
 ?>

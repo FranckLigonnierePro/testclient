@@ -1,36 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+h1,p {
+    text-shadow: -5px 5px 10px black;
+}
+
 body{
     background-color: #7f5a83;
     background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-    
-
 }
 .navbar{
-    
+    z-index: 50;
+}
 
+.navbar-nav{
+    font-size: 24px;
 }
 .navbar-inner {
     background:transparent;
 }
 .showcase {
+    position: absolute;
+    top:0;
     right: 0;
     width: 100%;
     min-height: 50vh;
 }
 .showcase video {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     object-fit: cover;
     z-index: 2;
-    opacity: 1;
+    opacity: 0.9;
 }
-.ffpic{
-    width: 50vw;
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/text.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
     
+  
+
+
+}
+.text{
+    position: absolute;
+    top: 80%;
+    left: 16%;
+  
+    color: aqua;
+    z-index: 3;
+}
+.text h1{
+    font-size: 128px;
 }
 
+.text p{
+    font-size: 36px;
+}
 
+.ffpic{
+    width: 40vw;
+    padding: 20px;
+}
+
+#product{
+    margin-top: 100vh;
+}
+.text a{
+    font-size: 24px;
+}
 
 h1{
     color: aqua;

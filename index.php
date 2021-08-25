@@ -5,13 +5,31 @@ include("connection.php");
 include("function.php");
 
 $user_data = check_login($con);
-
+$title = "Accueil | GAMERCASH";
 ?>
 
-<?php include("header.php"); ?>
 
-<section>
-    <?php
+<section class="showcase">
+<?php 
+include("header.php"); 
+?>
+
+ <video src="./images/ff7.mp4" muted loop autoplay></video>
+
+    <div class="overlay"></div>
+  <div class="text">    
+    <h1 class="fw-light text-white">Bienvenue chez GAMERCASH</h1>
+    <p class="lead text-white">Votre spécialiste consoles de jeux next generation, livraison rapide et frais de port imbatable!</p>
+    <a href="#product" class="btn btn-light my-2">Decouvrir les packs</a>       
+  </div>
+
+</section>
+
+
+
+<div id="product">
+  <?php
+
     if ($user_data = check_login($con)) {
 
         echo '<a href="logout.php">Logout</a>';
@@ -19,19 +37,8 @@ $user_data = check_login($con);
     }
 
     ?>
-</section>
-
-<section class="showcase">
-  <video src="./images/ff7.mp4" muted loop autoplay></video>
-       
-  <h1 class="fw-light text-white">Bienvenu chez GAMERCASH</h1>
-  <p class="lead text-white">Votre spécialiste consoles de jeux next generation, livraison rapide et frais de port imbatable!</p>
-  <p>
-    <a href="panier.php" class="btn btn-light my-2">Voir mon panier</a>       
-  </p>
-</section>
-
- <?php showArticles(); ?>
+  <?php showArticles(); ?>
+</div>
 
 
 <?php include("footer.php"); ?>

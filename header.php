@@ -15,22 +15,22 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
   <div class="container">
     <a class="navbar-brand text-light" href="index.php">
-      <img src="./images/fflogo.png" alt="" width="100px">
+      <img src="./images/fflogo.png" alt="" width="250px">
     </a>
     <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="custom-toggler navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+      <div class="navbar-nav mx-auto">
         <?php
         if(!$user_data){
-          echo '<a class="nav-link active text-light" aria-current="page" href="index.php">Accueil</a>';
-          echo '<a class="nav-link active text-light" href="login.php">login</a>';
+          echo '<a class="nav-link active text-light mx-5" aria-current="page" href="index.php">Accueil</a>';
+          echo '<a class="nav-link active text-light mx-5" href="login.php">login</a>';
 
         }else{
-         echo '<a class="nav-link active text-light" href="panier.php">Mon Panier</a>';
-         echo '<a class="nav-link active text-light" href="panier.php">Mes commandes</a>';
-         echo '<a class="nav-link active text-light" href="panier.php">Mon profil</a>';
+         echo '<a class="nav-link active text-light mx-5" href="panier.php">Mon Panier</a>';
+         echo '<a class="nav-link active text-light mx-5" href="panier.php">Mes commandes</a>';
+         echo '<a class="nav-link active text-light mx-5" href="panier.php">Mon profil</a>';
         }
         ?>
       </div>
