@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   <link rel="icon" type="image/png" href="./images/favicon.png">
   <title><?= $title ?></title>
@@ -23,9 +22,17 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active text-dark" aria-current="page" href="index.php">Accueil</a>
-        <a class="nav-link active text-dark" href="panier.php">Mon Panier</a>
-        <a class="nav-link active text-dark" href="login.php">login</a>
+        <?php
+        if(!$user_data){
+          echo '<a class="nav-link active text-light" aria-current="page" href="index.php">Accueil</a>';
+          echo '<a class="nav-link active text-light" href="login.php">login</a>';
+
+        }else{
+         echo '<a class="nav-link active text-light" href="panier.php">Mon Panier</a>';
+         echo '<a class="nav-link active text-light" href="panier.php">Mes commandes</a>';
+         echo '<a class="nav-link active text-light" href="panier.php">Mon profil</a>';
+        }
+        ?>
       </div>
     </div>
   </div>

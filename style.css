@@ -1,3 +1,37 @@
+body{
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    
+
+}
+.navbar{
+    
+
+}
 .navbar-inner {
     background:transparent;
+}
+.showcase {
+    right: 0;
+    width: 100%;
+    min-height: 50vh;
+}
+.showcase video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    z-index: 2;
+    opacity: 1;
+}
+.ffpic{
+    width: 50vw;
+    
+}
+
+
+
+h1{
+    color: aqua;
 }

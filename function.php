@@ -35,14 +35,16 @@ function getArticles()
     mysqli_close($con);
 }
 
-function showArticles()
-{
-
+function showArticles(){   
     $result = getArticles();
 
     while ($article = mysqli_fetch_array($result)) {
+        echo "<div class='my-2 d-flex'>";
+        echo "<div>";
+        echo '<img class="ffpic" src="' . $article['image'] . '" alt="' . $article["nom"] . '">';
+        echo "</div>";
 
-        echo '<img src="' . $article['image'] . '" alt="' . $article["nom"] . '" width="350">';
+        echo "<div>";
         echo "<h1>" . $article['nom'] . "</h1>";
         echo "<h1>" . $article['description'] . "</h1>";
         echo "<h1>" . $article['prix'] . "€</h1>";
@@ -54,7 +56,9 @@ function showArticles()
         echo '<input type="hidden" name="articlePanierId" value="' . $article['id'] . '">';
         echo '<button type="submit" class="btn btn-sm btn-outline-secondary">Ajouter au panier</button>';
         echo '</form>';
-       
+        echo "</div>";
+        echo "</div>";
+        
     }
 }
 

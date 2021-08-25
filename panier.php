@@ -37,12 +37,12 @@ if(isset($_POST['validation'])){
 <?php
 include('header.php');
 
-if(isset($_SESSION['cart']) && empty($_SESSION['cart'])){
-    echo "le panier est vide";
-}else{
-
-    showArticlePanier();
-}
+    if(isset($_SESSION['cart']) && empty($_SESSION['cart'])){
+        echo "le panier est vide";
+    }else{
+    
+        showArticlePanier();
+    }
 
 echo "<h1>total panier:" .totalArticle(). "</h1>";
 echo "<h1>total frais de port:" .fdp(). "</h1>";

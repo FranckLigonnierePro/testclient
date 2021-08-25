@@ -22,8 +22,17 @@ $user_data = check_login($con);
     ?>
 </section>
 
+<?php 
+if(!$user_data){
+    header("Location: login.php");
+}else{
+    showArticle($id); 
+}
 
- <?php showArticle($id); ?>
+
+
+?>
+
 
 
 <?php include("footer.php"); ?>
